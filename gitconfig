@@ -1,0 +1,5 @@
+[user]
+	name = asynkio
+	email = asynkio@gmail.com
+[core]
+	editor = nvim
