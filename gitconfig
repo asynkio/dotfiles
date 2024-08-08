@@ -1,5 +1,7 @@
+[diff]
+	tool = nvimdiff
+[difftool "nvimdiff"]
+	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
 [user]
-	name = asynkio
 	email = asynkio@gmail.com
-[core]
-	editor = nvim
+	name = asynkio
