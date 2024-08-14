@@ -144,6 +144,7 @@ eval "$(starship init zsh)"
 
 # Add user PATH
 export PATH="$PATH:$HOME/.local/bin:/opt/nvim/"
+export PATH=$PATH:/snap/bin
 
 # fzf uses fd to find
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.sass-cache,node_modules,build} --type f"
@@ -161,6 +162,7 @@ alias sai="sudo apt install"
 alias manzh="man -M /usr/share/man/zh_CN"
 alias mansc="man -M /usr/share/man/zh_CN"
 alias nv="nvim"
+alias jlab="jupyter lab --no-browser --ip=0.0.0.0 --port=5678"
 
 # Enable truecolor
 # export TERM="xterm-256color"
@@ -170,3 +172,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source $HOME/.cargo/env
+
+# set DISPLAY to X server
+export DISPLAY=localhost:0
