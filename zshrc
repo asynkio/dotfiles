@@ -174,4 +174,4 @@ export NVM_DIR="$HOME/.nvm"
 source $HOME/.cargo/env
 
 # set DISPLAY to X server
-export DISPLAY=localhost:0
+# export DISPLAY=localhost:0
