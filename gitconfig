@@ -5,3 +5,7 @@
 [user]
 	email = asynkio@gmail.com
 	name = asynkio
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false

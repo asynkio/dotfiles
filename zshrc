@@ -175,3 +175,4 @@ source $HOME/.cargo/env
 
 # set DISPLAY to X server
 # export DISPLAY=localhost:0
+export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
