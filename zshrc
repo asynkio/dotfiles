@@ -179,6 +179,8 @@ export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
 
 # tmux autostart
 if [[ -z "$TMUX" ]]; then
-  tmux attach || tmux new-session
+  tmux attach || tmux new-session \; run-shell "fastfetch"
+else
+  fastfetch
 fi
 
