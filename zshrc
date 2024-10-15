@@ -146,8 +146,9 @@ unset key
 eval "$(starship init zsh)"
 
 # Add user PATH
-export PATH="$PATH:$HOME/.local/bin:/opt/nvim/"
+export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH=$PATH:/snap/bin
+export PATH="$PATH:/usr/local/texlive/2024/bin/x86_64-linux"
 
 # fzf uses fd to find
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.sass-cache,node_modules,build} --type f"
@@ -161,6 +162,7 @@ export VISUAL="/opt/nvim/nvim"
 
 # Set aliases
 alias ll="ls -lah"
+alias fd="fdfind"
 alias sai="sudo apt install"
 alias manzh="man -M /usr/share/man/zh_CN"
 alias mansc="man -M /usr/share/man/zh_CN"
@@ -175,10 +177,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source $HOME/.cargo/env
-
-# set DISPLAY to X server
-# export DISPLAY=localhost:0
-export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
 
 # tmux autostart
 if [[ -z "$TMUX" ]]; then
