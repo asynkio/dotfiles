@@ -29,6 +29,9 @@ function vi-insert-mode-jk() {
 # 启用多键序列绑定
 zle -N vi-insert-mode-jk
 bindkey -M viins 'jk' vi-insert-mode-jk
+bindkey -M viins 'kj' vi-insert-mode-jk
+# 按键序列侦测时间
+export KEYTIMEOUT=7
 
 # Prompt for spelling correction of commands.
 #setopt CORRECT
