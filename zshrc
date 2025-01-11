@@ -178,10 +178,7 @@ export NVM_DIR="$HOME/.nvm"
 
 source $HOME/.cargo/env
 
-# tmux autostart
-if [[ -z "$TMUX" ]]; then
-  tmux attach || tmux new-session \; run-shell "fastfetch"
-else
-  fastfetch
-fi
+# zellij autostart
+eval "$(zellij setup --generate-auto-start zsh)"
 
+fastfetch
