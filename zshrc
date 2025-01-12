@@ -22,22 +22,21 @@ setopt HIST_IGNORE_ALL_DUPS
 bindkey -v
 
 # 定义一个函数来处理 'jk' 按键组合
-function vi-insert-mode-jk() {
+function vi-insert-mode-esc() {
   zle vi-cmd-mode
 }
 
 # 启用多键序列绑定
-zle -N vi-insert-mode-jk
-bindkey -M viins 'jk' vi-insert-mode-jk
-bindkey -M viins 'kj' vi-insert-mode-jk
+zle -N vi-insert-mode-esc
+bindkey -M viins ';l' vi-insert-mode-esc
 # 按键序列侦测时间
 export KEYTIMEOUT=7
 
 # Prompt for spelling correction of commands.
-#setopt CORRECT
+setopt CORRECT
 
 # Customize spelling correction prompt.
-#SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
+SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 
 # Remove path separator from WORDCHARS.
 WORDCHARS=${WORDCHARS//[\/]}
@@ -153,9 +152,6 @@ export PATH="$PATH:/usr/local/texlive/2024/bin/x86_64-linux"
 # fzf uses fd to find
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.sass-cache,node_modules,build} --type f"
 
-# Set up fzf key bindings and fuzzy completion
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-
 # Set up default editor as neovim
 export EDITOR="/opt/nvim/nvim"
 export VISUAL="/opt/nvim/nvim"
@@ -182,3 +178,5 @@ source $HOME/.cargo/env
 eval "$(zellij setup --generate-auto-start zsh)"
 
 fastfetch
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
